@@ -4,6 +4,10 @@
 </a>
 </p>
 
+<p align="center">
+<a href=""><img src="https://api.netlify.com/api/v1/badges/5872ef9c-f949-449c-bb5c-2ff497d8db2d/deploy-status" alt="Build Status"></a>
+</p>
+
 ## About
 
 Prank your friends with fake phone operation screens! **(PWA support, easily install it on your phone with fullscreen view)**
