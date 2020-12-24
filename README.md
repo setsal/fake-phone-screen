@@ -5,21 +5,21 @@
 </p>
 
 <p align="center">
-<a href=""><img src="https://api.netlify.com/api/v1/badges/5872ef9c-f949-449c-bb5c-2ff497d8db2d/deploy-status" alt="Build Status"></a>
+<a href="https://github.com/setsal/fake-phone-screen"><img src="https://api.netlify.com/api/v1/badges/5872ef9c-f949-449c-bb5c-2ff497d8db2d/deploy-status" alt="Build Status"></a>
 </p>
 
 ## About
 
-Prank your friends with fake phone operation screens! **(PWA support, easily install it on your phone with fullscreen view)**
+Prank your friends with fake phone operating screens! **(PWA support, easily install it on your phone with fullscreen view)**
 
 
 ## Origin 
 
 This project is inspired by [ShizukuIchi/fake-screen](https://github.com/ShizukuIchi/fake-screen)(cool work!) and my phone updates.
 
-How about building fake phone operation screens (like update, lock.etc) on the cellphone？
+How about building fake phone operating screens (like update, lock.etc) on the cellphone？
 
-So I make this project and build it as PWA for easily installing on the mobile. (also practice💪)
+So I made this project and build it as PWA for easy installation on the mobile. (also practice💪)
 
 
 ## Themes
@@ -47,7 +47,7 @@ npm run lint
 ## PWA mobile installation guide
 
 1. Install the latest Chrome (v.67 higher?)
-2. On your device, open Chrome Chrome.
+2. On your device, open Chrome
 3. Go to [https://fake-phone-screen.netlify.app/](https://fake-phone-screen.netlify.app/)
 4. Tap **Add to home screen** (If it dosen't pop up, open your browser menu and click it)
 5. Follow the onscreen instructions to install
