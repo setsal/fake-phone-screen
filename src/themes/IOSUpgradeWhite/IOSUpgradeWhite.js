@@ -27,22 +27,26 @@ export default styled(IOSUpgradeWhiteView)`
   justify-content: center;
   font-family: 'Noto Sans TC', sans-serif, 'Segoe UI light', Arial;
   word-break: break-word;
-  padding: 10px;
+  cursor: none;
+
   .logo {
     height: 50px;
     margin: 50px 0 40px 0;
   }
+
   .logo-containter {
     width: 70px;
     height: 70px;
     background: url(${AppleLogo}) no-repeat;
     background-size: 70px 70px;
   }  
+
   .content {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .progress-bar {
     border-radius: 5px;
     height: 3px;
@@ -53,6 +57,7 @@ export default styled(IOSUpgradeWhiteView)`
     position: relative;
     overflow: hidden;
   }
+
   .bar {
     position: absolute;
     width: 0;

@@ -19,6 +19,7 @@ export default styled(Option)`
   height: 100%;
   border-radius: 1.2px;
   box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.2);
+
   .img-container {
     position: absolute;
     width: 100%;
@@ -29,6 +30,7 @@ export default styled(Option)`
       object-fit: cover;
     }
   }
+
   .img-container:after {
     transition: background 0.4s;
     position: absolute;
@@ -39,6 +41,7 @@ export default styled(Option)`
     height: 100%;
     background: rgba(0, 0, 0, 0);
   }
+
   .img-container:hover:after {
     position: absolute;
     top: 0;
@@ -48,6 +51,7 @@ export default styled(Option)`
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
   }
+
   .title {
     pointer-events: none;
     position: absolute;
@@ -57,10 +61,11 @@ export default styled(Option)`
     color: white;
     left: 0;
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-shadow: black 1px 1px 2px;
     text-align: center;
   }
+
   &:hover .title {
     opacity: 1;
     top: 40%;

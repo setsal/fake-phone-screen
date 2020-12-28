@@ -37,32 +37,38 @@ export default styled(SamsungUpgradeView)`
   justify-content: center;
   font-family: 'Noto Sans TC', sans-serif, 'Segoe UI light', Arial;
   word-break: break-word;
-  padding: 10px;
+  cursor: none;
+
   .logo {
     height: 120px;
     margin: 120px 0 120px 0;
   }
+
   .logo-containter {
     width: 120px;
     height: 120px;
     background: url(${androidLogo}) no-repeat;
     background-size: 120px 120px;
   }  
+
   .content {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .messages {
     margin-top: 30px;
     & > * {
       margin-bottom: 3px;
     }
   }
+
   .progress {
     margin-right: 3px;
     font-size: 1.8em;
   }
+
   .progress-bar {
     height: 6px;
     width: 320px;
@@ -72,6 +78,7 @@ export default styled(SamsungUpgradeView)`
     position: relative;
     overflow: hidden;
   }
+  
   .bar {
     position: absolute;
     width: 0;

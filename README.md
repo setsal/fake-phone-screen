@@ -22,13 +22,15 @@ How about building fake phone operating screens (like update, lock.etc) on the c
 So I made this project and build it as PWA for easy installation on the mobile. (also practice💪)
 
 
-## Themes
+## Themes & Screenshot 
 
 - [x] Samsung Updating
 - [x] IOS Updating (black)
 - [x] IOS Updating (white)
-- [ ] Nexus Updating
+- [x] Android Default Updating (Pixel, Nexus.etc)
 - [ ] For future development, or...PR welcome :D
+
+![](https://i.imgur.com/ICxYcex.png)
 
 
 ## Development
