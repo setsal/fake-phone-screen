@@ -30,7 +30,9 @@ So I made this project and build it as PWA for easy installation on the mobile. 
 - [x] Android Default Updating (Pixel, Nexus.etc)
 - [ ] For future development, or...PR welcome :D
 
-![](https://i.imgur.com/ICxYcex.png)
+<p align="center">
+<img src="https://i.imgur.com/99xXMxb.png" width="600" />
+</p>
 
 
 ## Development
@@ -53,5 +55,5 @@ npm run lint
 3. Go to [https://fake-phone-screen.netlify.app/](https://fake-phone-screen.netlify.app/)
 4. Tap **Add to home screen** (If it dosen't pop up, open your browser menu and click it)
 5. Follow the onscreen instructions to install
-6. 🍻  Click the app and try it！
+6. 🎉 Click the app and try it！
 

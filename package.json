@@ -1,6 +1,6 @@
 {
   "name": "fake-phone-screen",
-  "version": "1.0.0-a.0",
+  "version": "1.0.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",

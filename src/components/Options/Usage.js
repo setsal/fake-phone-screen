@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { gsap, TimelineMax, Power4 } from 'gsap';
 import { CSSPlugin } from 'gsap/CSSPlugin';
 import Logo from '../../assets/logo.png';
+import t1Img from '../../assets/tutorial-01.jpg';
+import t2Img from '../../assets/tutorial-02.jpg';
+import t3Img from '../../assets/tutorial-03.jpg';
 
 gsap.registerPlugin(CSSPlugin);
 
@@ -10,6 +13,8 @@ function Usage({ className }) {
   const [state, setState] = useState({
     clicked: null,
   });
+
+  const [modalOpen, setModal] = useState(null);
 
   // refs for our DOM elements
   const innerContainer = useRef(null);
@@ -219,6 +224,11 @@ function Usage({ className }) {
     });
   }
 
+  function handlePWAGuide(e) {
+    e.preventDefault();
+    setModal(1);
+  }
+
   return (
     <div className={className}>
       <div className="navigation">
@@ -245,10 +255,61 @@ function Usage({ className }) {
               <a href="https://github.com/setsal/fake-phone-screen" rel="noreferrer" target="_blank">➢ Github Repo</a>
             </li>
             <li>
-              <a href="https://github.com/setsal/fake-phone-screen#pwa-mobile-installation-guide" rel="noreferrer" target="_blank">➢ Mobile PWA installation guide</a>
+              <button type="button" onClick={handlePWAGuide} onKeyDown={handlePWAGuide}>➢ Mobile PWA installation guide </button>
             </li>
           </ul>
         </div>
+      </div>
+      { modalOpen === 1
+          && <div className="pwd-guide"><Modal setModal={setModal} /></div>}
+    </div>
+  );
+}
+
+function Modal({ setModal }) {
+  return (
+    <div id="myModal" className="modal">
+
+      <span
+        role="button"
+        className="x-close"
+        onClick={() => setModal(0)}
+        onKeyDown={() => setModal(0)}
+        tabIndex={0}
+      >
+        &times;
+      </span>
+
+      <div className="modal-content">
+        <ul>
+          <li>
+            Install the latest Chrome (v.67 higher?)
+          </li>
+          <li>
+            On your device, open Chrome
+          </li>
+          <li>
+            Go to&nbsp;
+            <a href="https://fake-phone-screen.netlify.app/" rel="noreferrer" target="_blank">https://fake-phone-screen.netlify.app/</a>
+          </li>
+          <li>
+            Tap&nbsp;
+            <span style={{ fontWeight: 'bold' }}>Add to home screen</span>
+            &nbsp;(If it dosen&apos;t pop up, open your browser menu and click it)
+            <br />
+            <img src={t1Img} alt="t1Img" />
+          </li>
+          <li>
+            Follow the onscreen instructions to install
+            <br />
+            <img src={t2Img} alt="t2Img" />
+          </li>
+          <li>
+            🎉 Click the app and try it！
+            <br />
+            <img src={t3Img} alt="t3Img" />
+          </li>
+        </ul>
       </div>
     </div>
   );
@@ -372,6 +433,34 @@ export default styled(Usage)`
       display: block;
       padding: 0px 0;
     }
+
+    button {
+      background: none!important;
+      border: none;
+      position: relative;
+      padding: 10px 0;
+      cursor: pointer;
+      &:hover {
+        &:before {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+      }
+      
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 18px;
+        height: 4px;
+        opacity: 0;
+        background-color: #222222;
+        transform: translateX(100px);
+        transition: all 0.3s cubic-bezier(.55,0,.1,1);
+      }      
+    }
     
     a {
       text-decoration: none;
@@ -403,6 +492,7 @@ export default styled(Usage)`
     }
   }
   
+  /* ORZ I can not pretty handle the white block from all RWD... */
   .menu-bg {
     width: 250%;
     left: -53%;
@@ -425,18 +515,19 @@ export default styled(Usage)`
 
   @media only screen and (min-width: 200px) {
     .menu-bg {
+      width: 270%;
       height: 50%;
       &.middle {
         top: 13%;
         left: -65%;
       }
       &.top {
-        left: -50%;
+        left: -15%;
         top: 0;
       }
       &.bottom {
         top: 105%;
-        left: -30%;
+        left: -55%;
       }
     }
   }
@@ -454,7 +545,7 @@ export default styled(Usage)`
     .menu-bg {
       height: 80%;
       &.top {
-        left: -75%;
+        left: -55%;
       }
     }
   }
@@ -467,12 +558,70 @@ export default styled(Usage)`
       }
     }
   }
+  
   @media only screen and (min-width: 1200px) {
     .menu-bg {
       height: 200%;
       &.top {
         left: -50%;
       }
+      &.bottom {
+        left: -35%;
+      }
     }
-  }       
+  } 
+  
+
+  /* The Modal */
+  .modal {
+    display: block; 
+    position: fixed; 
+    z-index: 500; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+    text-align: center;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 80vw;
+    color: #fff;
+    font-size: 2vh;
+    ul {
+      list-style-type:decimal;
+      margin: auto 0;
+      li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      img {
+        margin: 10px;
+      }
+      a {
+        color: inherit;
+      }
+    }
+  }
+
+  /* The Close Button */
+  .x-close {
+    position: absolute;
+    top: 5vh;
+    left: 5vh;
+    color: #f1f1f1;
+    font-size: 2.3rem;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor: pointer;
+  }  
+    
 `;
