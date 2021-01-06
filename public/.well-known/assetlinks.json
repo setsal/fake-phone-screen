@@ -1,0 +1,5 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target" : { "namespace": "android_app", "package_name": "app.netlify.fake_phone_screen.twa",
+                   "sha256_cert_fingerprints": ["94:06:AD:13:7D:9F:64:F2:2E:61:4D:80:CC:41:E1:58:13:80:BE:1B:F0:B4:CA:27:FE:AD:37:BD:C8:B5:76:EE"] }
+    }]
